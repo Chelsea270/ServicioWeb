@@ -5,5 +5,7 @@ module org.test.servicioweb {
     requires com.fasterxml.jackson.databind;
 
     opens org.test.servicioweb to javafx.fxml;
+    opens org.test.servicioweb.model to javafx.base;
+    opens org.test.servicioweb.controller to javafx.fxml;
     exports org.test.servicioweb;
 }
