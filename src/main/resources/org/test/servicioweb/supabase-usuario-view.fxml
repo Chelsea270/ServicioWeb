@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="1300.0" spacing="10" style="-fx-background-color: #d7ffff;"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.test.servicioweb.controller.SupabaseController">
+
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <!-- Título -->
+    <Label text="Consulta de clientes - Supabase API REST">
+        <font>
+            <Font name="System Bold" size="16" />
+        </font>
+    </Label>
+
+    <!-- Botón + mensaje de estado -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button fx:id="btnConsultar" onAction="#consultarDatos" style="-fx-background-color: #c9729f;"
+                text="Consultar datos" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="lblEstado" text="Presione Consultar datos">
+            <font>
+                <Font name="System Italic" size="12.0" />
+            </font>
+        </Label>
+    </HBox>
+
+    <TableView fx:id="tblDatos" style="-fx-background-color: #e9f1dd;" VBox.vgrow="ALWAYS">
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colNombre" text="Nombre" />
+            <TableColumn fx:id="colApellido" text="Apellido" />
+            <TableColumn fx:id="colEmail" text="Correo" />
+            <TableColumn fx:id="colTelefono" text="Teléfono" />
+            <TableColumn fx:id="colFechaNacimiento" text="Nacimiento" />
+            <TableColumn fx:id="colPais" text="País" />
+            <TableColumn fx:id="colCiudad" text="Ciudad" />
+            <TableColumn fx:id="colDireccion" text="Dirección" />
+            <TableColumn fx:id="colIngresoAnual" text="Ingreso anual" />
+            <TableColumn fx:id="colPuntajeCredito" text="Puntaje" />
+            <TableColumn fx:id="colTieneDeuda" text="Tiene deuda" />
+            <TableColumn fx:id="colMontoDeuda" text="Monto deuda" />
+            <TableColumn fx:id="colEstado" text="Estado" />
+        </columns>
+    </TableView>
+</VBox>
